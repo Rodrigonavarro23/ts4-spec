@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TS4: Technical Specs for AI</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf9f5;
+      color: #1f2937;
+      font-size: 17px;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      background-color: #f0eee6;
+      color: #1f2937;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+    header img.logo {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0.5rem 0;
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .button {
+      background-color: #1f2937;
+      color: #ffffff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+      display: inline-block;
+      box-shadow: none;
+      text-transform: none;
+    }
+    .button:hover {
+      background-color: #2b394c;
+    }
+    .content {
+      max-width: 720px;
+      width: 100%;
+      padding: 2rem;
+    }
+    h2, h3 {
+      color: #111827;
+      margin-top: 2rem;
+      font-weight: 600;
+    }
+    pre, code {
+      background-color: #f0eee6;
+      padding: 0.75rem;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 2;
+      font-size: 15px;
+      color: #1f2937;
+      overflow-x: auto;
+      box-shadow: none;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  .prompt-container { display: flex; flex-direction: column; gap: 1rem; }
+.prompt button { padding: 0.4rem 0.8rem; margin-top: 0.5rem; cursor: pointer; border: none; background-color: #1f2937; color: #fff; border-radius: 4px; }
+.prompt button:hover { background-color: #374151; }
+</style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="logo.png" alt="TS4 Logo" />
+    <h1>Technical Specs for AI</h1>
+    <p>A lightweight format for technical decisions and rules, easily understood by AI and humans alike.</p>
+    <a class="button" href="https://github.com/tu-org/ts4-demo">View on GitHub</a>
+  </header>
+  <div class="content">
+    <h2>What is TS4?</h2>
+    <p>Simple YAML files to document technical decisions, implementation rules, and code references. Compact, easy to maintain, and optimized for AI indexing.</p>
+
+    <h3>Example</h3>
+    <pre><code>
+ts4: "1.0"
+id: "TS4-004"
+title: "System Input Validations"
+summary: "Validate data at controllers; internal services assume data validity."
+rules:
+  - "Avoid repeating validations in internal services"
+  - "Provide clear errors with 4xx HTTP status codes"
+code_refs:
+  - "handlers/user.go"
+  - "pkg/validation/*.go"</code></pre>
+
+    <h3>Benefits</h3>
+    <ul>
+      <li><strong>Live Context for AI</strong>: embedding-friendly, ideal for RAG and LangChain.</li>
+      <li><strong>Technical Traceability</strong>: clear and accessible rules without noise.</li>
+      <li><strong>Versionable and Incremental</strong>: designed for Git and continuous evolution.</li>
+      <li><strong>AI-Ready, Dev-Friendly</strong>: uses YAML without unnecessary complexity.</li>
+    </ul>
+
+    <h3>Use Cases</h3>
+    <ul>
+      <li>LangChain and RAG Agents: rapid context on decisions and rules.</li>
+      <li>Technical Audits: validations, security, structures.</li>
+      <li>Shared Repositories: clear communication between distributed teams.</li>
+    </ul>
+
+    <h3>Suggested AI Prompts</h3>
+
+    <div class="prompt-container">
+    <div class="prompt">
+        <pre><code id="prompt1">"You are an assistant who understands .ts4 files. Each file contains technical decisions, implementation rules, and code references. Use this content to provide precise technical context, respecting documented rules and recommendations."</code></pre>
+        <button onclick="copyToClipboard('prompt1')">Copy</button>
+    </div>
+    <div class="prompt">
+        <pre><code id="prompt2">"Analyze the .ts4 files and explain how the described technical decisions affect the architecture and code flow, suggesting improvements if applicable."</code></pre>
+        <button onclick="copyToClipboard('prompt2')">Copy</button>
+    </div>
+    <div class="prompt">
+        <pre><code id="prompt3">"Based on the .ts4 files, summarize key validation and security rules for a new team member, highlighting critical dependencies."</code></pre>
+        <button onclick="copyToClipboard('prompt3')">Copy</button>
+    </div>
+    </div>
+
+    <h3>IDE Configuration</h3>
+    <pre><code>// VS Code - settings.json
+"files.associations": {
+  "*.ts4": "yaml"
+}</code></pre>
+
+    <h3>Contribute</h3>
+    <p>Submit your <strong></strong>.ts4 files or share your experience integrating them with AI tools and pipelines. Open a PR to help improve the standard.</p>
+
+    <h3>Towards an Open Standard</h3>
+    <p>TS4 does not replace <strong><a href="https://cloud.google.com/architecture/architecture-decision-records?hl=es-419" target="_blank">ADRs</a></strong>; it complements them as a lightweight technical specification format geared towards AI agents and intelligences.</p>
+    <p>Its goal is to become a standard for technical documentation that AI can understand.</p>
+  </div>
+
+    <script>
+        function copyToClipboard(id) {
+        const text = document.getElementById(id).innerText;
+        navigator.clipboard.writeText(text);
+        }
+    </script>
+</body>
+</html>
