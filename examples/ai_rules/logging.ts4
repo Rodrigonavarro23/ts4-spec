@@ -1,0 +1,8 @@
+ts4: "1.0"
+id: "AI-LOG-001"
+title: "AI Logging Rules"
+summary: "AI-generated actions and decisions must be clearly logged for audit and traceability."
+rules:
+  - "Log every AI decision with a unique identifier"
+  - "Include timestamps and confidence scores in logs"
+  - "Use structured JSON format for logs"

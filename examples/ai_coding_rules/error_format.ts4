@@ -1,0 +1,7 @@
+ts4: "1.0"
+id: "AI-CODE-002"
+title: "Error Message Formatting"
+summary: "Error descriptions must be lowercase for consistency and readability."
+rules:
+  - "Use lowercase for all error and exception messages"
+  - "Messages should briefly describe the error clearly"

@@ -1,0 +1,8 @@
+ts4: "1.0"
+id: "AI-TEST-001"
+title: "AI Model Testing"
+summary: "All AI models must undergo thorough testing before deployment."
+rules:
+  - "Perform accuracy and bias evaluation tests"
+  - "Generate test reports and store them securely"
+  - "Re-test models quarterly or upon significant updates"

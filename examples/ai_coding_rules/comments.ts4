@@ -1,0 +1,7 @@
+ts4: "1.0"
+id: "AI-CODE-003"
+title: "Code Comments by AI"
+summary: "All generated code should include clear and concise inline comments."
+rules:
+  - "Explain briefly the purpose of non-obvious code segments"
+  - "Avoid redundant or overly verbose comments"

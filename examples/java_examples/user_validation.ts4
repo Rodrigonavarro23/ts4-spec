@@ -1,0 +1,9 @@
+ts4: "1.0"
+id: "JAVA-001"
+title: "User Input Validation"
+summary: "Validate user inputs strictly at the entry point to prevent invalid data propagation."
+rules:
+  - "Use javax.validation annotations (@NotNull, @Size)"
+  - "Reject inputs immediately if constraints are violated"
+code_refs:
+  - "UserController.java"

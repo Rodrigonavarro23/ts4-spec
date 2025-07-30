@@ -1,0 +1,8 @@
+ts4: "1.0"
+id: "BUS-003"
+title: "User Registration Policy"
+summary: "All users must verify their email before account activation."
+rules:
+  - "Send verification email immediately after registration"
+  - "Deactivate unverified accounts after 48 hours"
+  - "Limit to one account per verified email"

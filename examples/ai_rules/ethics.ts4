@@ -1,0 +1,8 @@
+ts4: "1.0"
+id: "AI-ETH-001"
+title: "AI Ethical Behavior Rules"
+summary: "AI responses must comply strictly with ethical standards and avoid harmful content."
+rules:
+  - "Reject or flag inputs that request unethical behavior"
+  - "Include moderation checks on outputs"
+  - "Review flagged interactions weekly"

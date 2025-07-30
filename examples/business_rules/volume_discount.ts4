@@ -1,0 +1,8 @@
+ts4: "1.0"
+id: "BUS-002"
+title: "Volume Discount Strategy"
+summary: "Provide tiered discounts based on purchase volume."
+rules:
+  - "5% discount for orders over 50 units"
+  - "10% discount for orders over 200 units"
+  - "Custom quotes for orders over 500 units"

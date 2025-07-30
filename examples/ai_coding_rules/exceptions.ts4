@@ -1,0 +1,7 @@
+ts4: "1.0"
+id: "AI-CODE-001"
+title: "Exception Handling"
+summary: "Avoid general exceptions to improve debugging accuracy."
+rules:
+  - "Never catch general Exception or Throwable"
+  - "Catch only specific exceptions relevant to the context"

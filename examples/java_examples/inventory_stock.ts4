@@ -1,0 +1,9 @@
+ts4: "1.0"
+id: "JAVA-003"
+title: "Inventory Stock Management"
+summary: "Maintain accurate stock levels and trigger restock actions automatically."
+rules:
+  - "Update stock synchronously upon sale confirmation"
+  - "Trigger automatic reorder if stock goes below threshold"
+code_refs:
+  - "InventoryManager.java"

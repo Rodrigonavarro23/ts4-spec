@@ -1,0 +1,9 @@
+ts4: "1.0"
+id: "JAVA-002"
+title: "Payment Processing Rules"
+summary: "Payments must follow strict verification and transaction logging rules."
+rules:
+  - "Transactions must be atomic and rollback on failure"
+  - "Log each transaction attempt clearly with timestamp and status"
+code_refs:
+  - "PaymentService.java"

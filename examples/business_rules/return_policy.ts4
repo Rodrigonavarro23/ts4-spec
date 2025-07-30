@@ -1,0 +1,8 @@
+ts4: "1.0"
+id: "BUS-001"
+title: "Product Return Policy"
+summary: "Customers can return products within 30 days if conditions are met."
+rules:
+  - "Items must be in original condition"
+  - "Proof of purchase required"
+  - "Refunds processed within 7 business days"
