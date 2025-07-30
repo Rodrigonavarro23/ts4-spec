@@ -105,17 +105,16 @@
     <p>Simple YAML files to document technical decisions, implementation rules, and code references. Compact, easy to maintain, and optimized for AI indexing.</p>
 
     <h3>Example</h3>
-    <pre><code>
-ts4: "1.0"
-id: "TS4-004"
-title: "System Input Validations"
-summary: "Validate data at controllers; internal services assume data validity."
-rules:
-  - "Avoid repeating validations in internal services"
-  - "Provide clear errors with 4xx HTTP status codes"
-code_refs:
-  - "handlers/user.go"
-  - "pkg/validation/*.go"</code></pre>
+    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(40, 40, 40); color: rgb(235, 219, 178);"><span class="hljs-attr" style="color: rgb(250, 189, 47);">ts4:</span> <span class="hljs-string" style="color: rgb(184, 187, 38);">"1.0"</span>
+<span class="hljs-attr" style="color: rgb(250, 189, 47);">id:</span> <span class="hljs-string" style="color: rgb(184, 187, 38);">"TS4-004"</span>
+<span class="hljs-attr" style="color: rgb(250, 189, 47);">title:</span> <span class="hljs-string" style="color: rgb(184, 187, 38);">"System Input Validations"</span>
+<span class="hljs-attr" style="color: rgb(250, 189, 47);">summary:</span> <span class="hljs-string" style="color: rgb(184, 187, 38);">"Validate data at controllers; internal services assume data validity."</span>
+<span class="hljs-attr" style="color: rgb(250, 189, 47);">rules:</span>
+<span class="hljs-bullet" style="color: rgb(142, 192, 124);">  -</span> <span class="hljs-string" style="color: rgb(184, 187, 38);">"Avoid repeating validations in internal services"</span>
+<span class="hljs-bullet" style="color: rgb(142, 192, 124);">  -</span> <span class="hljs-string" style="color: rgb(184, 187, 38);">"Provide clear errors with 4xx HTTP status codes"</span>
+<span class="hljs-attr" style="color: rgb(250, 189, 47);">code_refs:</span>
+<span class="hljs-bullet" style="color: rgb(142, 192, 124);">  -</span> <span class="hljs-string" style="color: rgb(184, 187, 38);">"handlers/user.go"</span>
+<span class="hljs-bullet" style="color: rgb(142, 192, 124);">  -</span> <span class="hljs-string" style="color: rgb(184, 187, 38);">"pkg/validation/*.go"</span></pre>
 
     <h3>Benefits</h3>
     <ul>
@@ -136,24 +135,24 @@ code_refs:
 
     <div class="prompt-container">
     <div class="prompt">
-        <pre><code id="prompt1">"You are an assistant who understands .ts4 files. Each file contains technical decisions, implementation rules, and code references. Use this content to provide precise technical context, respecting documented rules and recommendations."</code></pre>
+        <pre id="prompt1">"You are an assistant who understands .ts4 files. Each file contains technical decisions, implementation rules, and code references. Use this content to provide precise technical context, respecting documented rules and recommendations."</pre>
         <button onclick="copyToClipboard('prompt1')">Copy</button>
     </div>
     <div class="prompt">
-        <pre><code id="prompt2">"Analyze the .ts4 files and explain how the described technical decisions affect the architecture and code flow, suggesting improvements if applicable."</code></pre>
+        <pre id="prompt2">"Analyze the .ts4 files and explain how the described technical decisions affect the architecture and code flow, suggesting improvements if applicable."</pre>
         <button onclick="copyToClipboard('prompt2')">Copy</button>
     </div>
     <div class="prompt">
-        <pre><code id="prompt3">"Based on the .ts4 files, summarize key validation and security rules for a new team member, highlighting critical dependencies."</code></pre>
+        <pre id="prompt3">"Based on the .ts4 files, summarize key validation and security rules for a new team member, highlighting critical dependencies."</pre>
         <button onclick="copyToClipboard('prompt3')">Copy</button>
     </div>
     </div>
 
     <h3>IDE Configuration</h3>
-    <pre><code>// VS Code - settings.json
-"files.associations": {
-  "*.ts4": "yaml"
-}</code></pre>
+    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(40, 40, 40); color: rgb(235, 219, 178);">// VS Code - settings.json
+<span class="hljs-string" style="color: rgb(184, 187, 38);">"files.associations"</span>: {
+  <span class="hljs-attr" style="color: rgb(250, 189, 47);">"*.ts4"</span>: <span class="hljs-string" style="color: rgb(184, 187, 38);">"yaml"</span>
+}</pre>
 
     <h3>Contribute</h3>
     <p>Submit your <strong></strong>.ts4 files or share your experience integrating them with AI tools and pipelines. Open a PR to help improve the standard.</p>
@@ -165,8 +164,8 @@ code_refs:
 
     <script>
         function copyToClipboard(id) {
-        const text = document.getElementById(id).innerText;
-        navigator.clipboard.writeText(text);
+          const text = document.getElementById(id).innerText;
+          navigator.clipboard.writeText(text);
         }
     </script>
 </body>
